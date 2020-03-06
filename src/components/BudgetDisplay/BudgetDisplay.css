@@ -1,0 +1,26 @@
+.display{
+    background-color: lavender;
+    
+}
+.net {
+    height: 3.5rem;
+    width:  30rem;
+    border: 1px solid black;
+    font-size: 32px; 
+    color: goldenrod;  
+}
+
+.income {
+    height: 2.5rem;
+    width: 30rem;
+    border: 1px solid darkcyan;
+    font-size:20px;
+    color:  darkcyan;
+}
+.expense{
+    height: 2.5rem;
+    width: 30rem;
+    border: 1px solid rgba(233, 6, 6, 0.89);
+    font-size:20px;
+    color: rgba(233, 6, 6, 0.89);
+}

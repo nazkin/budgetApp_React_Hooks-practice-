@@ -1,0 +1,13 @@
+.incomes {
+    background-color: lavender;
+    font-size: 20px;
+    color: darkcyan;
+}
+.expenses {
+    font-size: 20px;
+    color:rgba(233, 6, 6, 0.89);
+    background-color: linen;
+}
+ul{
+    list-style: none;
+}
