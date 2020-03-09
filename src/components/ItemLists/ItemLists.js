@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import './ItemLists.css';
 /**
 * @author
@@ -6,19 +6,24 @@ import './ItemLists.css';
 **/
 
 const ItemLists = (props) => {
-    
+   
+
   return(
     <div className="container my-2">
         <div className="row">
             <div className="incomes col-md-6 border-right border-left text-center">
                 <h3>Incomes</h3>
                 <ul>
-                    {props.allTransactions.map(tr=>{
+                    {props.transactions.map(tr=>{
+                        
                         if(tr.type == 'inc'){
-                            return(<li className="float-left" key={tr.id}>
+                            return( 
+                                    <li className="float-left" key={tr.id}>
                                         <span className="mx-3">+</span>
                                         <span className="mx-3">USD$ {tr.value}</span>
                                         <span className="mx-3">{tr.description}</span>
+                                        <button 
+                                        className="btn-outline-danger ">X</button>
                                     </li>
                             )
 
@@ -29,12 +34,14 @@ const ItemLists = (props) => {
             <div className="expenses col-md-6 border-right">
                 <h3>Expenses</h3>
                 <ul>
-                    {props.allTransactions.map(tr=>{
+                    {props.transactions.map(tr=>{
                         if(tr.type == 'exp'){
                             return(<li className="float-left" key={tr.id}>
                                         <span className="mx-3">-</span>
                                         <span className="mx-3">USD$ {tr.value}</span>
                                         <span className="mx-3">{tr.description}</span>
+                                        <button 
+                                         className="btn-outline-danger">X</button>
                                     </li>
                             )
 
